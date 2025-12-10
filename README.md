@@ -130,7 +130,7 @@ Basta criar uma planilha em branco no Google Sheets, copiar o ID da URL para o s
 
 ## Bibliotecas Core
 
-Este repositório atua como a "cola" de integração. A lógica reside em:
+Este repositório atua como integração de dois outros projetos. A lógica reside em:
 
 - **Orquestração**: [yt-gsheet-orchestrator](https://github.com/AndreKoraleski/YT-G-Sheets-Orchestrator)
 - **Engine**: [yt-audio-dl](https://github.com/AndreKoraleski/yt_audio_dl)
