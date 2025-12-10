@@ -35,7 +35,6 @@ graph LR
 - **Resiliência a Falhas**:
   - Erros são capturados e enviados para a **DLQ** (Dead Letter Queue) com a mensagem exata do erro.
   - **Backoff Exponencial**: O worker "dorme" progressivamente quando não há tarefas, economizando recursos.
-- **Stack Moderna**: Construído com `uv` (gerenciador ultra-rápido) e imagem Docker otimizada com Node.js para quebrar assinaturas complexas do YouTube.
 
 ## Pré-requisitos
 
