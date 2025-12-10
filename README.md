@@ -17,7 +17,11 @@ graph LR
     A[Usuário] -->|Adiciona URL| B(Google Sheets)
     B -->|Lê Fila| C[Worker 01]
     B -->|Lê Fila| D[Worker 02]
-    C -->|Download & Conversão| E{YouTube}
+
+    C -->|Solicita Download| E{YouTube}
+    E -->|Arquivo de Mídia| G[Dispositivo / Armazenamento Local]
+    C -->|Download & Conversão| G
+
     C -->|Atualiza Status| B
     C -.->|Erro?| F[Aba DLQ]
 ```
