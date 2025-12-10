@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "yt-gsheets-audio-worker"
+version = "0.1.0"
+description = "Worker de integração para download de áudio distribuído via Google Sheets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "AndreKoraleski", email = "andrekorale@gmail.com" }
+]
+dependencies = [
+    # O Orchestrator já cuida do carregamento do .env internamente
+    "yt-gsheet-orchestrator>=0.1.2",
+    "yt-audio-dl @ git+https://github.com/AndreKoraleski/yt_audio_dl.git"
+]
+
+[project.scripts]
+yt-gsheets-audio-worker = "yt_gsheets_audio_worker.__main__:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/yt_gsheets_audio_worker"]
